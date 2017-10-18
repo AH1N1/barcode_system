@@ -1,1 +1,2 @@
-# barcode_system
+# barcode_system   
+Misiak Pysiak
