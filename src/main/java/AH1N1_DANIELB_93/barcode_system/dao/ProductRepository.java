@@ -1,6 +1,6 @@
-package dao;
+package AH1N1_DANIELB_93.barcode_system.dao;
 
-import model.Product;
+import AH1N1_DANIELB_93.barcode_system.model.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

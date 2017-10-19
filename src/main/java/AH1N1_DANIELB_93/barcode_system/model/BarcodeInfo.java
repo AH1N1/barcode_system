@@ -1,4 +1,4 @@
-package model;
+package AH1N1_DANIELB_93.barcode_system.model;
 
 public class BarcodeInfo {
     private String barcode;
