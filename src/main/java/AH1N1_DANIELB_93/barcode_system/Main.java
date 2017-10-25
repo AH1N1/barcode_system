@@ -32,8 +32,9 @@ public class Main {
 				discountRepository.save(discount);
 			});
 
-			Discount discount = discountRepository.findOne(1L);
-			productRepository.save(new Product("produkt_specjalny" ,new BigDecimal(2.3),1,1111))
+			//Discount discount = discountRepository.findOne(1L);//dziala
+			Discount discount = new Discount(); //nie dziala
+			productRepository.save(new Product("produkt_specjalny" ,new BigDecimal(2.3),1,discount,1111));
 
 //			Discount discount = new Discount(Arrays.asList(new Product("japko",new BigDecimal(2.3),1,1234)) );
 //			discountRepository.save(discount);

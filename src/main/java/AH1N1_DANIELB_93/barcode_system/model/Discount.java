@@ -13,9 +13,10 @@ public class Discount {
     private Long did;
     private String dtype; // what kind of shit will it be?
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "pdiscount", cascade = CascadeType.ALL)
+    //@JoinColumn(name = "product_id")
     //@Column(name = "product")
-    @JoinTable(name="Product_Discount", joinColumns={@JoinColumn(name="discount_id", referencedColumnName="discount_id")} , inverseJoinColumns={@JoinColumn(name="product_id", referencedColumnName="product_id")})
+    //@JoinTable(name="Product_Discount", joinColumns={@JoinColumn(name="discount_id", referencedColumnName="discount_id")} , inverseJoinColumns={@JoinColumn(name="product_id", referencedColumnName="product_id")})
     private Collection<Product> dproducts;
 
     public Discount() {

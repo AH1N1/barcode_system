@@ -20,9 +20,9 @@ public class Product implements Serializable{
     @Column(name = "product_barcode")
     private Integer pbarcode;
 //    @ManyToOne(cascade = CascadeType.ALL)
-    //@JoinColumn(name = "product_id")
-//    @ManyToOne
-//    private Discount pdiscount;
+    @JoinColumn(name = "discount_id")
+    @ManyToOne(cascade = CascadeType.ALL)
+    private Discount pdiscount;
 
     public Product() {
     }
@@ -67,19 +67,19 @@ public class Product implements Serializable{
         this.pamount = pamount;
     }
 
-//    public Discount getPdiscount() {
-//        return pdiscount;
-//    }
-//
-//    public void setPdiscount(Discount pdiscount) {
-//        this.pdiscount = pdiscount;
-//    }
+    public Discount getPdiscount() {
+        return pdiscount;
+    }
+
+    public void setPdiscount(Discount pdiscount) {
+        this.pdiscount = pdiscount;
+    }
 
     public Product(String pname, BigDecimal pprice, int pamount, Discount pdiscount, Integer pbarcode) {
         this.pname = pname;
         this.pprice = pprice;
         this.pamount = pamount;
-//        this.pdiscount = pdiscount;
+        this.pdiscount = pdiscount;
         this.pbarcode = pbarcode;
 
     }
